@@ -1,0 +1,551 @@
+    1  ping google.com
+    2  ls
+    3  sudo nvpmodel -q --verbose
+    4  git clone https://github.com/MIDS-scaling-up/v3.git
+    5  cd v3/week01/hw
+    6  chmod +x configure_jetson.sh
+    7  ./configure_jetson.sh
+    8  sudo iw dev wlan0 set power_save off
+    9  sudeo apt-get update
+   10  sudo apt-get update
+   11  sudo apt-get upgrade
+   12  hostname -I
+   13  free -h
+   14  sudo reboot
+   15  python3 --version
+   16  sudo apt update
+   17  sudo apt insall -y python3-pip
+   18  sudo apt install -y python3-pip
+   19  sudo -H pip3 install -U jetson-stats
+   20  sudo reboot
+   21  jtop
+   22  docker run hello-world
+   23  # allow remote X connections
+   24  xhost +
+   25  # assuming that r32.4.3 is the latest version; but please check the NGC
+   26  docker run -it --rm --net=host --runtime nvidia  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-base:r32.4.4
+   27  sudo docker info
+   28  sudo docker info | grep nvidia
+   29  docker ps
+   30  docker run --rm hello-world
+   31  docker pull ubuntu:latest
+   32  sudo reboot
+   33  ping google.com
+   34  docker run --rm hello-world
+   35  docker pull ubuntu:latest
+   36  docker run --name ubuntu --hostname ubuntu --rm -it ubuntu bash
+   37  docker run -d --name web --hostname web --rm -p 8080:80 nginx
+   38  docker stop web
+   39  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+   40  .wimrc
+   41  .vimrc
+   42  curl https://raw.githubusercontent.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc
+   43  sudo apt update
+   44  sudo apt install curl
+   45  curl https://raw.githubusercontent.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc
+   46  vim
+   47  .vimrc
+   48  ls
+   49  cd v3
+   50  ;s
+   51  ls
+   52  cd ..
+   53  ls
+   54  curl https://raw.githubusercontent.com/grigio/vim-sublime/master/vimrc > $HOME/.vimrc
+   55  vim
+   56  ls
+   57  cd Documents/
+   58  ls
+   59  cp monokai.vim ~/.vim/colors/
+   60  vim ~/.vimrc
+   61  cp monokai.vim ~/.vim/colors/
+   62  cp monokai.vim ~/.vim/colors
+   63  pip install --user powerline-status
+   64  pip3 install --user powerline-status
+   65  vim ~/.vimrc
+   66  ls
+   67  subl monokai.vim 
+   68  subl /etc/docker/daemon.json
+   69  nano /etc/docker/daemon.json
+   70  vim /etc/docker/daemon.json
+   71  sudo reboot
+   72  docker ps
+   73  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+   74  sudo apt-get install apt-transport-https
+   75  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+   76  sudo apt-get update
+   77  sudo apt-get install sublime-text
+   78  docker ps
+   79  hostname -I
+   80  sudo reboot
+   81  ls
+   82  pwd
+   83  ls -la
+   84  ls
+   85  pwd
+   86  export DISPLAY=:0
+   87  sudo xhost +
+   88  docker login
+   89  ls
+   90  cd v3/week03/hw/
+   91  ls
+   92  cd ..
+   93  cd lab/
+   94  ls
+   95  cd build_example_
+   96  cd build_example_1
+   97  ;s
+   98  ls
+   99  docker ps
+  100  docker tag myimage rohitbakshi/myjupyter
+  101  docker push rohitbakshi/myjupyter
+  102  cd ..
+  103  ls
+  104  cd build_example_2
+  105  ls
+  106  subl Dockerfile 
+  107  subl cam.py
+  108  lsusb
+  109  sudo apt-get install v4l-utils
+  110  v4l2-ctl --list-devices
+  111  df
+  112  subl cam.py
+  113  sudo apt update
+  114  sudo apt install -y curl
+  115  ls
+  116  $HOME
+  117  mkdir $HOME/.kube/
+  118  curl -sfL https://get.k3s.io | sh -s - --docker --write-kubeconfig-mode 644 --write-kubeconfig $HOME/.kube/config
+  119  kubect get nodes
+  120  kubect1 get nodes
+  121  kubectl get nodes
+  122  sudo systemctl disable k3s
+  123  sudo systemctl start k3s
+  124  sudo systemctl stop k3s
+  125  sudo systemctl start k3s
+  126  sudo systemctl stop k3s
+  127  cd ..
+  128  ls
+  129  subl deployNginx.yaml
+  130  kubectl apply -f deployNginx.yaml
+  131  sudo -i
+  132  cd v3/week03/lab/
+  133  subl deployNginx.yaml
+  134  ls
+  135  cat deployNginx.yaml 
+  136  ls
+  137  kubectl apply -f deployNginx.yaml
+  138  sudo -i
+  139  trace -eopenat kubectl version
+  140  strace -eopenat kubectl version
+  141  I've encountered this problem and swapoff -a works for me though.
+  142  sudo -i
+  143  swapoff -a
+  144  exit
+  145  strace -eopenat kubectl version
+  146  sudo apt install -y mosquitto-clients
+  147  sudo apt install -y mosquitto
+  148  allow_anonymous true
+  149  ls
+  150  mkdir build_example_3
+  151  ls
+  152  cd build_example_3
+  153  subl Dockerfile
+  154  cat Dockerfile 
+  155  ls
+  156  docker build -t rohitbakshi/mosquitto:v1 .
+  157  docker push rdejana/mosquitto:v1
+  158  docker push rohitbakshi/mosquitto:v1
+  159  ls
+  160  subl mosquitto.yaml
+  161  kubectl apply -f mosquitto.yaml
+  162  sudo swapoff -a
+  163  sudo systemctl restart kubelet.service
+  164  free -h
+  165  sudo swapon -a
+  166  free -h
+  167  strace -eopenat kubectl version
+  168  sudo apt install strace #Debian/Ubuntu
+  169  strace -eopenat kubectl version
+  170  sudo -i
+  171  strace -eopenat kubectl version
+  172  kubectl get nodes
+  173  curl -sfL https://get.k3s.io | sh -s - --docker --write-kubeconfig-mode 644 --write-kubeconfig $HOME/.kube/config
+  174  kubectl get nodes
+  175  /usr/local/bin/k3s-uninstall.sh
+  176  curl -sfL https://get.k3s.io | sh -s - --docker --write-kubeconfig-mode 644 --write-kubeconfig $HOME/.kube/config
+  177  kubectl get nodes
+  178  ls
+  179  kubectl apply -f mosquitto.yaml
+  180  kubectl describe deployment mosquitto-deployment
+  181  kubectl get pods -l app=mosquitto
+  182  subl mosquittoService.yaml
+  183  kubectl apply -f mosquittoService.yaml
+  184  kubectl get service mosquitto-servic
+  185  mosquitto_pub -h localhost -p 1883:31067 -t my_topic -m "hello mqtt"
+  186  cd tmp/
+  187  ls
+  188  subl kmosq.yaml
+  189  ls
+  190  kubectl apply -f kmosq.yaml 
+  191  ls
+  192  cd v3/week03/lab/build_example_3
+  193  ls
+  194  subl publisher.py
+  195  python3 publisher.py 
+  196  ls
+  197  mkdir tmp
+  198  ls
+  199  cd tmp
+  200  subl Dockerfile
+  201  docker build -t rohitbakshi/mosquitto:v2 .
+  202  subl Dockerfile
+  203  ls
+  204  cd ..
+  205  ls
+  206  cp listener.py tmp/
+  207  ls
+  208  cd tmp/
+  209  ls
+  210  cp listener.py
+  211  docker build -t rohitbakshi/mosquitto:v2 .
+  212  ls
+  213  docker push rohitbakshi/mosquitto:v2
+  214  cd ..
+  215  ls
+  216  python2 publisher.py 
+  217  python3 publisher.py 
+  218  subl /etc/docker/daemon.json
+  219  export DISPLAY=:0
+  220  sudo xhost +
+  221  xhost +local:
+  222  export DISPLAY=:1.0
+  223  sudo xhost +
+  224  docker run --rm --network host -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/l4t-base:r32.6.1
+  225  ls
+  226  cd v3/
+  227  ls
+  228  cd week03
+  229  ls
+  230  cd lab
+  231  ls
+  232  cd build_example_1
+  233  ;s
+  234  ls
+  235  subl 
+  236  subl Dockerfile 
+  237  docker build -t myimage
+  238  docker build myimage
+  239  docker build -t myimage .
+  240  docker run -ti -p 8888:8888 myimag
+  241  docker run -ti -p 8888:8888 myimage
+  242  subl Dockerfile 
+  243  cd ..
+  244  ls
+  245  cd build_example_2
+  246  ls
+  247  subl Dockerfile 
+  248  subl cam.py 
+  249  docker build -t camera .
+  250  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camera:latest
+  251  docker tag camera rohitbakshi/camera
+  252  docker push rohitbakshi/camera
+  253  free -h
+  254  mosquitto_sub -h localhost -p <service port> -t my_topic
+  255  mosquitto_sub -h localhost -p 1883:31067 -t my_topic
+  256  pip3
+  257  pip3 install paho-mqtt
+  258  cd ..
+  259  ls
+  260  cd build_example_3
+  261  ls
+  262  subl listener.py
+  263  cat listener.py 
+  264  python3 listener.py 
+  265  sudo shutdown
+  266  whoami
+  267  la
+  268  ls
+  269  pqs
+  270  pwd
+  271  subl
+  272  sudo shutdown
+  273  pwd
+  274  ;s
+  275  ls
+  276  cd v3
+  277  ls
+  278  cd week03
+  279  ls
+  280  cd hw
+  281  ls
+  282  sudo systemctl start k3s
+  283  kubectl get pods
+  284  kubectl delete pod mosquitto-deployment-7896d6f5ff-m94gh20h
+  285  kubectl delete pod mosquitto-deployment-7896d6f5ff-m94gh
+  286  kubectl delete pod listener-85c9594db5-6tfv6
+  287  kubectl get pods
+  288  kubectl delete pod mosquitto-deployment-7896d6f5ff-5675k
+  289  kubectl get pods
+  290  kubectl get svc --all-namespaces -o wide
+  291  ls
+  292  mkdir camera_container
+  293  ls
+  294  cd camera_container/
+  295  ls
+  296  subl Dockerfile
+  297  ls
+  298  subl cam.py
+  299  subl Dockerfile 
+  300  pwd
+  301  ls
+  302  docker build -t camtest .
+  303  subl Dockerfile 
+  304  docker build -t camtest .
+  305  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camera:latest
+  306  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest:latest
+  307  subl cam.py 
+  308  docker build -t camtest .
+  309  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest:latest
+  310  subl 
+  311  subl Dockerfile 
+  312  subl cam.py 
+  313  cat cam.py 
+  314  docker build -t camtest .
+  315  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest:latest
+  316  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camera:latest
+  317  docker ps
+  318  docker build -t camtest .
+  319  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camera:latest
+  320  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest:latest
+  321  docker build -t camtest2 .
+  322  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  323  export DISPLAY=:0
+  324  sudo xhost +
+  325  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  326  ls
+  327  subl cam.py 
+  328  docker build -t camtest2 .
+  329  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  330  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest:latest
+  331  subl cam.py 
+  332  ls
+  333  docker build -t camtest2 .
+  334  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  335  docker build -t camtest2 .
+  336  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  337  docker build -t camtest2 .
+  338  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  339  docker build -t camtest2 .
+  340  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  341  docker build -t camtest2 .
+  342  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  343  docker build -t camtest2 .
+  344  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  345  docker build -t camtest2 .
+  346  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  347  docker build -t camtest2 .
+  348  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  349  docker build -t camtest2 .
+  350  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  351  docker build -t camtest2 .
+  352  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  353  subl Dockerfile 
+  354  docker build -t camtest2 .
+  355  subl Dockerfile 
+  356  pwd
+  357  docker build -t camtest2 .
+  358  ls
+  359  pwd
+  360  subl Dockerfile 
+  361  docker build -t camtest2 .
+  362  kubectl get pods
+  363  cd ..
+  364  ls
+  365  mkdir jetson_mqtt_broker_container
+  366  ls
+  367  cd jetson_mqtt_broker_container/
+  368  ls
+  369  pwd
+  370  subl Dockerfile
+  371  ls
+  372  cat Dockerfile 
+  373  docker build -t mosqtest1 .
+  374  subl mosquitto-hw3.yaml
+  375  kubectl apply -f mosquitto-hw3.yaml
+  376  kubectl describe deployment mosquitto-hw3-deployment
+  377  kubectl get pod
+  378  kubectl get pods
+  379  subl mosquitto-hw3.yaml
+  380  subl mosquitto-hw3-service.yaml 
+  381  kubectl apply -f mosquitto-hw3-service.yaml.yaml
+  382  kubectl apply -f mosquitto-hw3-service.yaml
+  383  kubectl get service mosquitto-service
+  384  mosquitto_pub -h localhost -p 1883:31067 -t my_topic -m "hello mqtt"
+  385  mosquitto_pub -h localhost -p 1883:31067 -t my_topic -m "test rohit"
+  386  cd ..
+  387  ls
+  388  cd camera_container/
+  389  ls
+  390  subl cam.py
+  391  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  392  docker build -t camtest2 .
+  393  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  394  subl Dockerfile 
+  395  docker build -t camtest2 .
+  396  subl Dockerfile 
+  397  docker build -t camtest2 .
+  398  subl Dockerfile 
+  399  docker build -t camtest2 .
+  400  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  401  cam.py
+  402  subl cam.py
+  403  docker build -t camtest2 .
+  404  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  405  docker build -t camtest2 .
+  406  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  407  subl cam.py
+  408  docker build -t camtest2 .
+  409  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  410  docker build -t camtest2 .
+  411  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  412  docker build -t camtest2 .
+  413  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  414  docker build -t camtest2 .
+  415  subl Dockerfile 
+  416  docker build -t camtest2 .listener-747b6d65-d99nf
+  417  docker build -t camtest2 .
+  418  subl cam.py 
+  419  docker build -t camtest2 .
+  420  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  421  subl cam.py 
+  422  docker build -t camtest2 .
+  423  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  424  docker build -t rohitbakshi/camtest2 .
+  425  docker push rohitbakshi/camtest2
+  426  ls
+  427  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY camtest2:latest
+  428  ls
+  429  cat Dockerfile 
+  430  subl cam.py 
+  431  docker build -t camtest2 .
+  432  docker build -t rohitbakshi/camtest2 .
+  433  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  434  docker build -t rohitbakshi/camtest2 .
+  435  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  436  docker build -t rohitbakshi/camtest2 .
+  437  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  438  docker build -t rohitbakshi/camtest2 .
+  439  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  440  docker build -t rohitbakshi/camtest2 .
+  441  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  442  cat Dockerfile 
+  443  subl cam_kube.yaml
+  444  ls
+  445  kubectl apply -f cam
+  446  kubectl apply -f cam_kube.yaml 
+  447  kubectl get pods
+  448  kubectl logs -f publisher-859756fc54-59fkl
+  449  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  450  subl cam.py
+  451  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  452  docker build -t rohitbakshi/camtest2 .
+  453  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  454  docker build -t rohitbakshi/camtest2 .
+  455  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  456  docker build -t rohitbakshi/camtest2 .
+  457  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  458  docker build -t rohitbakshi/camtest2 .
+  459  subl cam.py 
+  460  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  461  subl cam.py 
+  462  docker build -t rohitbakshi/camtest2 .
+  463  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  464  ls
+  465  subl publisher.py
+  466  python3 publisher.py
+  467  subl publisher.py
+  468  python3 publisher.py
+  469  ls
+  470  subl cam.py 
+  471  docker build -t rohitbakshi/camtest2 .
+  472  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  473  ls
+  474  subl publisher.py 
+  475  python3 publisher.py
+  476  subl publisher.py 
+  477  python3 publisher.py
+  478  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  479  ls
+  480  subl cam.py 
+  481  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  482  python3 publisher.py
+  483  subl publisher.py
+  484  python3 publisher.py
+  485  cp publisher.py publisher2.py 
+  486  python3 publisher2.py
+  487  ls
+  488  subl publisher2.py 
+  489  python3 publisher2.py
+  490  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  491  docker build -t rohitbakshi/camtest2 .
+  492  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  493  docker build -t rohitbakshi/camtest2 .
+  494  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  495  docker build -t rohitbakshi/camtest2 .
+  496  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  497  docker build -t rohitbakshi/camtest2 .
+  498  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  499  docker build -t rohitbakshi/camtest2 .
+  500  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  501  docker build -t rohitbakshi/camtest2 .
+  502  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  503  docker build -t rohitbakshi/camtest2 .
+  504  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  505  docker build -t rohitbakshi/camtest2 .
+  506  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  507  docker build -t rohitbakshi/camtest2 .
+  508  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  509  docker build -t rohitbakshi/camtest2 .
+  510  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  511  docker build -t rohitbakshi/camtest2 .
+  512  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  513  docker build -t rohitbakshi/camtest2 .
+  514  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  515  docker build -t rohitbakshi/camtest2 .
+  516  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  517  docker build -t rohitbakshi/camtest2 .
+  518  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  519  docker build -t rohitbakshi/camtest2 .
+  520  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  521  docker build -t rohitbakshi/camtest2 .
+  522  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  523  docker build -t rohitbakshi/camtest2 .
+  524  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  525  docker build -t rohitbakshi/camtest2 .
+  526  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  527  docker build -t rohitbakshi/camtest2 .
+  528  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  529  docker build -t rohitbakshi/camtest2 .
+  530  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  531  docker build -t rohitbakshi/camtest2 .
+  532  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  533  docker build -t rohitbakshi/camtest2 .
+  534  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  535  docker build -t rohitbakshi/camtest2 .
+  536  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  537  docker build -t rohitbakshi/camtest2 .
+  538  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  539  docker build -t rohitbakshi/camtest2 .
+  540  docker run -it --rm --device /dev/video0 --network host -e DISPLAY=$DISPLAY rohitbakshi/camtest2:latest
+  541  ls
+  542  cd ..
+  543  cd camera_container/
+  544  cd ..
+  545  ls
+  546  cd w251-hw3/
+  547  ls
+  548  mv cmd_history.txt jetson_cmd_history_1.txt
+  549  ls
+  550  history -> jetson_cmd_history_2.txt
+  551  history > jetson_cmd_history_2.txt
