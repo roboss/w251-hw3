@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: listener-hw3
+spec:
+  selector:
+    matchLabels:
+      app: listener-hw3
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: listener-hw3
+    spec:
+      containers:
+      - name: listener-hw3
+        image: rohitbakshi/klistener
