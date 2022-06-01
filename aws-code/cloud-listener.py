@@ -26,8 +26,8 @@ def on_message(client,userdata, msg):
         print(type(im))
         width, height = im.size
         print(width, height)
-        aws_access_key_id = "AKIAQGBYSLAO3ENJ5SMH"
-        aws_secret_access_key = "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"
+        aws_access_key_id = "TEST_KEY"
+        aws_secret_access_key = "SECRET_KEY"
         session = boto3.Session(aws_access_key_id=aws_access_key_id,aws_secret_access_key=aws_secret_access_key)
         s3 = session.resource("s3")
         txt =  b'etgertherThis is the content of the file uploaded from python boto3 asdfasdf'
