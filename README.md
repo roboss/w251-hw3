@@ -8,6 +8,7 @@
 10 points for explaining the MQTT topics and the QoS that you used.
   
 10 points for storing your faces in publicly reachable object storage DONE
+  NEED TO LOGIN WITH YOUR AWS ACCOUNT - could not find a way without login
   LINK: https://s3.console.aws.amazon.com/s3/buckets/firstbuckettestrohit
   
 10 bonus points for using Kubernetes instead of Docker on the cloud side. DONE
